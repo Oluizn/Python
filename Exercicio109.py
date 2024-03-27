@@ -35,7 +35,7 @@ def novo_evento_B(ciclo):
     return vezes_numero_aparece / ciclo
 
 ciclo = 10**6
-
+# chamando funções
 print(f"A probabiliade de sair carta vermelha (evento A) é de {evento_A(ciclo)*100:.2f}%")
 print(f"A probabiliade de sair carta rainha (evento B)é de {evento_B(ciclo)*100:.2f}%")
 print("São eventos independentes, pois pra sair carta vermelha não necessariamente precisa ser uma rainha,\ne pra sair uma rainha não necessariamente precisa ser vermelha")
