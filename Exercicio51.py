@@ -21,8 +21,9 @@ def probabilidade_rei_sequencia2(ciclo, rei):
         sequencia_reis = 0
         for j in range(2):  # Procurando por uma sequência de 2 reis
             resultado = random.randint(1, cartas_no_baralho // cartas_por_naipe)
-            if resultado == rei:
+            if resultado == 2:
                 sequencia_reis += 1
+                i += 1  # incrementar o contador do loop externo para caso satisfaça a condição
             else:
                 sequencia_reis = 0
                 break
@@ -44,6 +45,7 @@ def probabilidade_rei_sequencia4(ciclo, rei):
             resultado = random.randint(1, cartas_no_baralho // cartas_por_naipe)
             if resultado == rei:
                 sequencia_reis += 1
+                i += 1  # incrementar o contador do loop externo para caso satisfaça a condição
             else:
                 sequencia_reis = 0
                 break
@@ -67,7 +69,8 @@ def probabilidade_rei_sequencia2_unreplaced(ciclo, lista_rei):
 
             if resultado in lista_rei:  # sair um rei
                 sequencia_reis += 1
-                cartas_restantes -= 1
+                cartas_restantes -= 1   # retirar uma carta do baralho
+                i += 1  # incrementar o contador do loop externo para caso satisfaça a condição
             else:
                 sequencia_reis = 0
                 break
@@ -91,7 +94,8 @@ def probabilidade_rei_sequencia4_unreplaced(ciclo, lista_rei):
 
             if resultado in lista_rei:  # sair um rei
                 sequencia_reis += 1
-                cartas_restantes -= 1
+                cartas_restantes -= 1   # retirar uma carta do baralho
+                i += 1  # incrementar o contador do loop externo para caso satisfaça a condição
             else:
                 sequencia_reis = 0
                 break
