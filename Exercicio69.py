@@ -5,6 +5,7 @@ bolas_vermelhas = 5
 bolas_roxas = 2
 total_bolas = bolas_azuis + bolas_roxas + bolas_vermelhas
 
+
 # Função para gerar um número aleatório entre 0 e 1
 def taxa_escolha(taxa):
     rando = rn.random()
@@ -13,7 +14,8 @@ def taxa_escolha(taxa):
     else:
         return False
 
-# Função para ver quantas bolas roxas são escolhidas de acordo com seu coeficiente de escolha
+
+# Função para ver quantas bolas roxas são escolhidas
 def prob_bola_roxa(ciclo):
     cont = 0
 
@@ -41,6 +43,7 @@ def prob_bola_roxa(ciclo):
 
     return cont / ciclo
 
+
 def prob_2_roxa(ciclo):
     # Variáveis locais recebem valor das variáveis globais
     total = total_bolas
@@ -62,6 +65,7 @@ def prob_2_roxa(ciclo):
         roxa = bolas_roxas
         total = total_bolas
     return cont_geral / ciclo
+
 
 def prob_2_vermelha(ciclo):
     # Variáveis locais recebem valor das variáveis globais
@@ -85,6 +89,7 @@ def prob_2_vermelha(ciclo):
         total = total_bolas
     return cont_geral / ciclo
 
+
 def prob_2_azul(ciclo):
     # Variáveis locais recebem valor das variáveis globais
     total = total_bolas
@@ -107,6 +112,7 @@ def prob_2_azul(ciclo):
         total = total_bolas
     return cont_geral / ciclo
 
+
 def vermelha_than_roxa(ciclo):
     vermelha = bolas_vermelhas
     roxa = bolas_roxas
@@ -121,6 +127,7 @@ def vermelha_than_roxa(ciclo):
                 cont += 1
         total = total_bolas
     return cont / ciclo
+
 
 ciclo = 10**6
 

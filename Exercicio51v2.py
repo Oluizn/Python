@@ -1,5 +1,8 @@
 import random as rn
 
+ciclo = 10**6   # Quantidade de iterações
+
+
 # Função para coeficientes de acertividade
 def coeficiente(taxa):
     rando = rn.random()
@@ -8,7 +11,8 @@ def coeficiente(taxa):
     else:
         return False
 
-# Função pra sair 1 rei
+
+# Função para sair 1 rei
 def prob_rei(ciclo):
     cartas_baralho = 52
     cartas_naipe = 4
@@ -19,7 +23,8 @@ def prob_rei(ciclo):
             cont += 1
     return cont / ciclo
 
-# Função para sair 2 reis em sequencia
+
+# Função para sair 2 reis em sequência
 def prob_rei_seq2(ciclo):
     cartas_baralho = 52
     cartas_naipe = 4
@@ -37,7 +42,8 @@ def prob_rei_seq2(ciclo):
             dois_reis += 1
     return dois_reis / ciclo
 
-# Função para sair 2 reis em sequencia sem reposição de carta
+
+# Função para sair 2 reis em sequência sem reposição de carta
 def prob_rei_seq2_unreplaced(ciclo):
     cartas_baralho = 52
     cartas_naipe = 4
@@ -59,7 +65,8 @@ def prob_rei_seq2_unreplaced(ciclo):
         cartas_naipe = 4
     return dois_reis / ciclo
 
-# Função para sair 4 reis em sequencia
+
+# Função para sair 4 reis em sequência
 def prob_rei_seq4(ciclo):
     cartas_baralho = 52
     cartas_naipe = 4
@@ -78,7 +85,8 @@ def prob_rei_seq4(ciclo):
             quatro_reis += 1
     return quatro_reis / ciclo
 
-# Função para sair 4 reis em sequencia sem reposição de carta
+
+# Função para sair 4 reis em sequência sem reposição de carta
 def prob_rei_seq4_unreplaced(ciclo):
     cartas_baralho = 52
     cartas_naipe = 4
@@ -100,9 +108,8 @@ def prob_rei_seq4_unreplaced(ciclo):
         cartas_naipe = 4
     return quatro_reis / ciclo
 
-# Chamando as funções e dando o valor de iterações
 
-ciclo = 10**6
+# Chamando as funções
 print(f"probabilidade vim rei {prob_rei(ciclo)*100:.2f}%")
 print(f"probabilidade vim 2 reis em sequencia {prob_rei_seq2(ciclo)*100:.4f}%")
 print(f"probabilidade vim 2 reis em sequencia sem reposição{prob_rei_seq2_unreplaced(ciclo)*100:.4f}%")

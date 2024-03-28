@@ -1,12 +1,14 @@
 import random as rn
 
-# Função coeficiente
+
+# Função para o coeficiente
 def taxa_erro(taxa):
     rando = rn.random()
     if rando < taxa:
         return True
     else:
         return False
+
 
 # Função para que uma em quatro pessoas cometam um erro
 def cometer_erro(ciclo):
@@ -18,6 +20,7 @@ def cometer_erro(ciclo):
                 cont += 1
                 break
     return cont / ciclo
+
 
 # Função para que duas em quatro pessoas cometam um erro
 def cometer_erro_dois(ciclo):
@@ -32,6 +35,8 @@ def cometer_erro_dois(ciclo):
             cont_geral += 1
     return cont_geral / ciclo
 
+
 ciclo = 10**6
+
 print(f"Probabilidade de 1 em 4 pessoas cometer erro {cometer_erro(ciclo)*100:.2f}%")
 print(f"Probabilidade de 2 em 4 pessoas cometer erro {cometer_erro_dois(ciclo)*100:.2f}%")
