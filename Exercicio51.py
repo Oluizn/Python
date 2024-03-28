@@ -1,15 +1,22 @@
 import random
 
 # Função para calcular probabilidade de retirar 1 rei
-def probabilidade_rei(ciclo, rei):
-    vezes_numero_aparece = 0
-    cartas_no_baralho = 52  # Total de cartas no baralho
-    cartas_por_naipe = 4  # Cartas iguais com naipe diferente (por exemplo, 4 reis)
+def coeficiente(taxa):
+    rando = rn.random()
+    if rando < taxa:
+        return True
+    else:
+        return False
+
+def prob_rei(ciclo):
+    cartas_baralho = 52
+    cartas_naipe = 4
+    cont = 0
     for i in range(ciclo):
-        resultado = random.randint(1, cartas_no_baralho // cartas_por_naipe)    # Simulando retirada de cartas, como são 52 cartas e cada carta possui 4 variações, totaliza 13 de espaço amostral
-        if resultado == rei:
-            vezes_numero_aparece += 1
-    return vezes_numero_aparece / ciclo
+        rei = coeficiente(cartas_naipe / cartas_baralho)
+        if rei:
+            cont += 1
+    return cont / ciclo
 
 # Função para calcular a probabilidade para retirar 2 reis em sequência, com reposição da carta rei ao ser sorteada
 def probabilidade_rei_sequencia2(ciclo, rei):
@@ -23,7 +30,6 @@ def probabilidade_rei_sequencia2(ciclo, rei):
             resultado = random.randint(1, cartas_no_baralho // cartas_por_naipe)
             if resultado == 2:
                 sequencia_reis += 1
-                i += 1  # incrementar o contador do loop externo para caso satisfaça a condição
             else:
                 sequencia_reis = 0
                 break
@@ -45,7 +51,6 @@ def probabilidade_rei_sequencia4(ciclo, rei):
             resultado = random.randint(1, cartas_no_baralho // cartas_por_naipe)
             if resultado == rei:
                 sequencia_reis += 1
-                i += 1  # incrementar o contador do loop externo para caso satisfaça a condição
             else:
                 sequencia_reis = 0
                 break
@@ -70,7 +75,6 @@ def probabilidade_rei_sequencia2_unreplaced(ciclo, lista_rei):
             if resultado in lista_rei:  # sair um rei
                 sequencia_reis += 1
                 cartas_restantes -= 1   # retirar uma carta do baralho
-                i += 1  # incrementar o contador do loop externo para caso satisfaça a condição
             else:
                 sequencia_reis = 0
                 break
@@ -95,7 +99,6 @@ def probabilidade_rei_sequencia4_unreplaced(ciclo, lista_rei):
             if resultado in lista_rei:  # sair um rei
                 sequencia_reis += 1
                 cartas_restantes -= 1   # retirar uma carta do baralho
-                i += 1  # incrementar o contador do loop externo para caso satisfaça a condição
             else:
                 sequencia_reis = 0
                 break
