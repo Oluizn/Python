@@ -32,7 +32,7 @@ def defeito(ciclo, fabrica, defeito):
 
 
 # definindo variável de repetição
-ciclo = 10**7
+ciclo = 10**6
 
 # Chamando as funções
 defeito_fabrica_a = defeito(ciclo, prod_a, defeito_a)   # 15000

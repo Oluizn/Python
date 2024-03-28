@@ -1,6 +1,5 @@
 import random as rn
 
-
 # coeficientes de probabilidade das empresas
 empresa_a = 0.4
 empresa_b = 0.35
@@ -19,6 +18,7 @@ def coeficiente(taxa):
         return True
     else:
         return False
+
 
 # Função para verificar se foi ultrapassado os custos pela agência
 def consultorias(ciclo, empresa, custo):
@@ -39,7 +39,7 @@ quantidade_empresa_a = consultorias(ciclo, empresa_a, custo_a)
 quantidade_empresa_b = consultorias(ciclo, empresa_b, custo_b)
 quantidade_empresa_c = consultorias(ciclo, empresa_c, custo_c)
 
-#Calculando a probabilidade de cada empresa ultrapassar os custo, fazendo a quantidade individual divido pelo numero total somado das 3 empresas
+# Calculando a probabilidade de cada empresa ultrapassar os custo, fazendo a quantidade individual divido pelo numero total somado das 3 empresas
 prob_empresa_a = quantidade_empresa_a / (quantidade_empresa_a + quantidade_empresa_b + quantidade_empresa_c)
 prob_empresa_b = quantidade_empresa_b / (quantidade_empresa_a + quantidade_empresa_b + quantidade_empresa_c)
 prob_empresa_c = quantidade_empresa_c / (quantidade_empresa_a + quantidade_empresa_b + quantidade_empresa_c)

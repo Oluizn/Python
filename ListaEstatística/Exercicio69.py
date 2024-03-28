@@ -44,6 +44,7 @@ def prob_bola_roxa(ciclo):
     return cont / ciclo
 
 
+# Função para verificar a probabilidade de vir duas bolas roxas
 def prob_2_roxa(ciclo):
     # Variáveis locais recebem valor das variáveis globais
     total = total_bolas
@@ -67,6 +68,7 @@ def prob_2_roxa(ciclo):
     return cont_geral / ciclo
 
 
+# Função para verificar a probabilidade de vir duas bolas vermelhas
 def prob_2_vermelha(ciclo):
     # Variáveis locais recebem valor das variáveis globais
     total = total_bolas
@@ -90,6 +92,7 @@ def prob_2_vermelha(ciclo):
     return cont_geral / ciclo
 
 
+# Função para verificar a probabilidade de vir duas bolas azuis
 def prob_2_azul(ciclo):
     # Variáveis locais recebem valor das variáveis globais
     total = total_bolas
@@ -113,7 +116,8 @@ def prob_2_azul(ciclo):
     return cont_geral / ciclo
 
 
-def vermelha_than_roxa(ciclo):
+# Função para verificar a probabilidade de vir uma vermelha e depois uma roxa
+def vermelha_then_roxa(ciclo):
     vermelha = bolas_vermelhas
     roxa = bolas_roxas
     total = total_bolas
@@ -133,4 +137,4 @@ ciclo = 10**6
 
 print(f"A probabilidade da bola roxa ser escolhida é de {prob_bola_roxa(ciclo)*100:.2f}%")
 print(f"A probabilidade das bolas serem das mesma cor {(prob_2_azul(ciclo)*100)+(prob_2_vermelha(ciclo)*100)+(prob_2_roxa(ciclo)*100):.2f}%")
-print(f"A probabilidade da segunda bola ser roxa, dada que a primeira foi vermelha, é de {vermelha_than_roxa(ciclo)*100:.2f}%")
+print(f"A probabilidade da segunda bola ser roxa, dada que a primeira foi vermelha, é de {vermelha_then_roxa(ciclo)*100:.2f}%")
