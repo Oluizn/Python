@@ -8,7 +8,7 @@ def taxa_erro(taxa):
     else:
         return False
 
-# Função para uma em quatro pessoas cometer um erro
+# Função para que uma em quatro pessoas cometam um erro
 def cometer_erro(ciclo):
     cont = 0
     for i in range(ciclo):
@@ -19,7 +19,7 @@ def cometer_erro(ciclo):
                 break
     return cont / ciclo
 
-
+# Função para que duas em quatro pessoas cometam um erro
 def cometer_erro_dois(ciclo):
     cont_geral = 0
     for i in range(ciclo):
