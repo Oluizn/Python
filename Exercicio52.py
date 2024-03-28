@@ -18,4 +18,4 @@ def cometer_erro(ciclo):
     return cont / ciclo
 
 ciclo = 10**6
-print(f"Probabilidade de uma pessoa de 4 cometer erro {cometer_erro(ciclo)*100:.2f}%")
+print(f"Probabilidade de 1 em 4 pessoas cometer erro {cometer_erro(ciclo)*100:.2f}%")
