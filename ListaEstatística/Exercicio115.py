@@ -32,7 +32,7 @@ def defeito(ciclo, fabrica, defeito):
 
 
 # definindo variável de repetição
-ciclo = 10000000
+ciclo = 10**7
 
 # Chamando as funções
 defeito_fabrica_a = defeito(ciclo, prod_a, defeito_a)   # 15000
@@ -40,10 +40,10 @@ defeito_fabrica_b = defeito(ciclo, prod_b, defeito_b)   # 175000
 defeito_fabrica_c = defeito(ciclo, prod_c, defeito_c)   # 100000
 
 
-# Calculando a probabilidade de defeito por fábrica fazendo a quantidade de defeito dividido pelo numero total de defeito somado de todas as fábricas
+# Calculando a probabilidade de defeito por fábrica fazendo a quantidade de defeito de cada dividido pelo numero total de defeito somado de todas as fábricas
 probabilidade_defeito_fabrica_a = defeito_fabrica_a / (defeito_fabrica_a + defeito_fabrica_b + defeito_fabrica_c)
 probabilidade_defeito_fabrica_b = defeito_fabrica_b / (defeito_fabrica_a + defeito_fabrica_b + defeito_fabrica_c)
 probabilidade_defeito_fabrica_c = defeito_fabrica_c / (defeito_fabrica_a + defeito_fabrica_b + defeito_fabrica_c)
-print(f"A probabilidade da peças defeituosa ser da fabrica A é de {probabilidade_defeito_fabrica_a*100:.10f}")
-print(f"A probabilidade da peças defeituosa ser da fabrica B é de {probabilidade_defeito_fabrica_b*100:.10f}")
-print(f"A probabilidade da peças defeituosa ser da fabrica C é de {probabilidade_defeito_fabrica_c*100:.10f}")
+print(f"A probabilidade da peças defeituosa ser da fabrica A é de {probabilidade_defeito_fabrica_a*100:.2f}%")
+print(f"A probabilidade da peças defeituosa ser da fabrica B é de {probabilidade_defeito_fabrica_b*100:.2f}%")
+print(f"A probabilidade da peças defeituosa ser da fabrica C é de {probabilidade_defeito_fabrica_c*100:.2f}%")
