@@ -12,13 +12,15 @@ def evento_a(ciclo):    # Sair carta vermelha
     return vezes_numero_aparece / ciclo
 
 
+# Função para determinar a probabilidade de acontecer o evento "escolher uma rainha"
 def evento_b(ciclo):    # Sair carta rainha
     vezes_numero_aparece = 0    # Contador quando condição é satisfeita
     cartas_baralho = 52     # Número total de cartas em um baralho
     cartas_naipe = 4    # Número de cartas por naipe
+    const_rainha = 12
     for i in range(ciclo):
         resultado = rn.randint(1, cartas_baralho // cartas_naipe)    # Número aleatório de 1 a 13
-        if resultado == 12:
+        if resultado == const_rainha:
             vezes_numero_aparece += 1
     return vezes_numero_aparece / ciclo
 
@@ -28,9 +30,10 @@ def novo_evento_b(ciclo):
     vezes_numero_aparece = 0
     cartas_baralho = 52
     cartas_naipe = 4
+    const_rainha = 12
     for i in range(ciclo):
         resultado = rn.randint(1, cartas_baralho // cartas_naipe)
-        if resultado == 12:
+        if resultado == const_rainha:
             lista = ["copas", "ouro", "paus", "espada"]
             resultado = rn.choice(lista)
             if resultado == "copas":

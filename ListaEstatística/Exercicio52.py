@@ -13,8 +13,9 @@ def taxa_erro(taxa):
 # Função para que uma em quatro pessoas cometam um erro
 def cometer_erro(ciclo):
     cont = 0
+    const_pessoas = 4
     for i in range(ciclo):
-        for j in range(4):
+        for j in range(const_pessoas):
             erro = taxa_erro(0.1)
             if erro:
                 cont += 1
@@ -25,9 +26,10 @@ def cometer_erro(ciclo):
 # Função para que duas em quatro pessoas cometam um erro
 def cometer_erro_dois(ciclo):
     cont_geral = 0
+    pessoas = 4
     for i in range(ciclo):
         cont = 0
-        for j in range(4):
+        for j in range(pessoas):
             erro = taxa_erro(0.1)
             if erro:
                 cont += 1

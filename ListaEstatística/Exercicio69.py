@@ -22,10 +22,11 @@ def prob_bola_roxa(ciclo):
     # Variáveis locais recebem valor das variáveis globais
     roxa = bolas_roxas
     total = total_bolas
+    const_bolas = 2
     for i in range(ciclo):
 
         # Retirada de duas bolas sem reposição
-        for j in range(2):
+        for j in range(const_bolas):
             escolha = taxa_escolha(roxa / total)
             if escolha:
                 cont += 1
@@ -51,8 +52,9 @@ def prob_2_roxa(ciclo):
     roxa = bolas_roxas
     cont = 0
     cont_geral = 0
+    const_bolas = 2
     for i in range(ciclo):
-        for j in range(2):
+        for j in range(const_bolas):
             resultado = taxa_escolha(roxa / total)
             if resultado:
                 cont += 1       # Contador até 2 para verificar se vão ser duas bolas iguais
@@ -61,7 +63,7 @@ def prob_2_roxa(ciclo):
             else:
                 cont = 0
                 break
-        if cont == 2:
+        if cont == const_bolas:
             cont_geral += 1     # Contador de acertos com duas bolas iguais
         roxa = bolas_roxas
         total = total_bolas
@@ -75,8 +77,9 @@ def prob_2_vermelha(ciclo):
     vermelha = bolas_vermelhas
     cont = 0
     cont_geral = 0
+    const_bolas = 2
     for i in range(ciclo):
-        for j in range(2):
+        for j in range(const_bolas):
             resultado = taxa_escolha(vermelha / total)
             if resultado:
                 cont += 1       # Contador até 2 para verificar se vão ser duas bolas iguais
@@ -85,7 +88,7 @@ def prob_2_vermelha(ciclo):
             else:
                 cont = 0
                 break
-        if cont == 2:
+        if cont == const_bolas:
             cont_geral += 1     # Contador de acertos com duas bolas iguais
         vermelha = bolas_vermelhas
         total = total_bolas
@@ -99,8 +102,9 @@ def prob_2_azul(ciclo):
     azul = bolas_azuis
     cont = 0
     cont_geral = 0
+    const_bolas = 2
     for i in range(ciclo):
-        for j in range(2):
+        for j in range(const_bolas):
             resultado = taxa_escolha(azul / total)
             if resultado:
                 cont += 1       # Contador até 2 para verificar se vão ser duas bolas iguais
@@ -109,7 +113,7 @@ def prob_2_azul(ciclo):
             else:
                 cont = 0
                 break
-        if cont == 2:
+        if cont == const_bolas:
             cont_geral += 1     # Contador de acertos com duas bolas iguais
         azul = bolas_azuis
         total = total_bolas
