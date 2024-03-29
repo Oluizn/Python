@@ -1,3 +1,9 @@
+# Suponhamos uma urna contendo bolas idˆenticas
+# sendo: 4 azuis, 5 vermelhas e 2 roxas. S˜ao extra´ıdas 2 bolas sem reposi¸c˜ao. Calcule a probabilidade de:
+# a.) ser extra´ıda ao menos 1 bola roxa;
+# b.) as duas bolas serem da mesma cor.
+# c.) a segunda bola ser roxa, dado que a primeira
+# foi vermelha.
 import random as rn
 
 bolas_azuis = 4

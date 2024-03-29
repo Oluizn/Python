@@ -1,6 +1,16 @@
+#  Uma carta ´e retirada de um pacote padr˜ao de
+# 52 cartas bem embaralhadas. Qual ´e a probabilidade de que seja um rei? Ap´os o sorteio
+# desta carta rei, uma segunda ´e sorteada, qual ´e
+# a probabilidade de que a segunda carta retirada
+# seja tamb´em um rei?
+# Qual ´e a probabilidade de que as primeiras quatro cartas serem retiradas de um baralho padr˜ao
+# de 52 cartas bem embaralhadas sejam todas de
+# reis. Considere que, uma vez sorteada:
+# a.) uma carta n˜ao ´e reposta ao baralho.
+# b.) uma carta ´e reposta ao baralho
 import random as rn
 
-ciclo = 10**6   # Quantidade de iterações
+ciclo = 10**8   # Quantidade de iterações
 
 
 # Função para coeficientes de acertividade

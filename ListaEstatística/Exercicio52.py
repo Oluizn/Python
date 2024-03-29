@@ -1,3 +1,9 @@
+# Se a probabilidade de que uma pessoa cometa
+# um erro em sua declara¸c˜ao de imposto de renda
+# ´e de 0,1; determine a probabilidade de que:
+# a.) uma de quatro pessoas, que n˜ao tˆem nenhuma rela¸c˜ao entre si, cometa um erro.
+# b.) que Jo˜ao e Alberto cometam um erro e
+# Roberto e M´arcia n˜ao cometam erro.
 import random as rn
 
 

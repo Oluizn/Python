@@ -1,3 +1,9 @@
+# Seja A o evento em que uma carta retirada
+# aleatoriamente de um baralho de 52 cartas seja
+# vermelha, e B o evento que esta carta ´e uma
+# rainha. S˜ao eventos independentes A e B? O
+# que acontece se o evento B ´e o evento que a
+# carta retirada seja rainha de copas?
 import random as rn
 
 

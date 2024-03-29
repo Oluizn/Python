@@ -1,3 +1,9 @@
+# Uma companhia monta r´adios cujas pe¸cas s˜ao
+# produzidas em trˆes de suas f´abricas denominadas A1, A2 e A3. Elas produzem, respectivamente, 15%, 35% e 50% do total. As probabilides das f´abricas A1, A2 e A3 produzirem
+# pe¸cas defeituosas s˜ao 1%; 5% e 2%, respectivamente. Uma pe¸ca ´e escolhida ao acaso do conjunto das pe¸cas produzidas. Essa pe¸ca ´e testada
+# e verifica-se que ´e defeituosa. Qual ´e a probabilidade que tenha sido produzida pela f´abrica Ai
+# ,
+# para i = 1, 2, 3?
 import random as rn
 
 # Coeficientes de produção de cada fábrica

@@ -1,3 +1,12 @@
+# Certa agˆencia federal emprega trˆes empresas de
+# consultoria (A, B e C), com probabilidades de
+# 0,40; 0,35 e 0,25; respectivamente. Sabe-se, com
+# base em experiˆencias anteriores, que a probabilidade de os custos serem ultrapassados por cada
+# uma das empresas ´e de 0,05; 0,03 e 0,15, respectivamente. Suponha que a agˆencia exceda os
+# custos.
+# (a) Qual ´e a probabilidade de que a consultoria
+# envolvida seja a A?
+# (b) Qual ´e a probabilidade de que seja a consultoria C?
 import random as rn
 
 # coeficientes de probabilidade das empresas
